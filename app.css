@@ -1,0 +1,105 @@
+/* Variables */
+
+:root {
+  --primary-blue: #2196f3;
+  --light-blue: #bbdefb;
+  --light-gray: #bdbdbd;
+  --white: #ffffff;
+}
+
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  color: var(--light-gray);
+}
+
+/* Helper */
+.flex {
+  display: flex;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-grow-1 {
+  flex-grow: 1;
+}
+.hidden {
+  display: none;
+}
+
+.mb-2 {
+  margin-bottom: 20px;
+}
+
+#appContainer {
+  height: 100%;
+  width: 100%;
+  border: 5px solid gray;
+  background-color: yellow;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#login {
+  border: 1px solid lightgray;
+  padding: 10px;
+  margin: 10px;
+}
+
+#mainContent {
+  justify-content: center;
+  width: 100%;
+}
+
+#chat {
+  background: green;
+  margin: 25px 0px;
+  padding: 25px;
+  color: white;
+  overflow-y: scroll;
+}
+
+.message-right {
+  background-color: var(--light-blue);
+  color: gray;
+  margin-left: 20%;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+.message-left {
+  background-color: purple;
+  color: white;
+  margin-right: 20%;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+/* Form */
+input {
+  height: 40px;
+  padding: 10px;
+  background: var(--light-blue);
+  border: none;
+  color: var(--secondary-text);
+}
+button {
+  height: 40px;
+  padding: 10px;
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+}

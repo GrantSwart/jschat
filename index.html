@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+
+  <body>
+    <div id="appContainer" class="flex-column">
+      <header>
+        <div class="container flex-column flex-center"><h1>Chat App</h1></div>
+      </header>
+
+      <div id="mainContent" class="container flex-column">
+        <!-- Login form-->
+        <section id="login">
+          <form id="loginForm" class="flex">
+            <input
+              type="text"
+              name="username"
+              id="usernameInput"
+              placeholder="username"
+              class="flex-grow-1"
+            />
+            <button id="loginBtn">Chat button</button>
+          </form>
+        </section>
+
+        <!-- Message -->
+        <section id="chat">
+          <div id="messageList" class="flex-grow-1">
+            <div class="message-left">
+              Left messages
+              <div id="message-details">
+                <p class="message-author">James</p>
+                <p class="message-date">10/31/2020</p>
+                <p class="message-content">
+                  Lorem left message odhfovdhodho;hvfd"
+                </p>
+              </div>
+            </div>
+
+            <div class="message-right">
+              Right Messages
+              <div id="message-details">
+                <p class="message-author"></p>
+                <p class="message-date">10/31/2020</p>
+                <p class="message-content">
+                  Lorem right message dofhiuodshgoiudshdsou"
+                </p>
+              </div>
+            </div>
+
+            <p>James has joined the chat</p>
+          </div>
+
+          <!-- Message Form -->
+          <form id="messageForm" class="flex">
+            <input
+              type="text"
+              name="message"
+              id="messageInput"
+              placeholder="enter a message"
+              class="flex-grow-1"
+            />
+            <button id="loginBtn">Message button</button>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
