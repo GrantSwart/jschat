@@ -16,6 +16,7 @@ const loginWindow = document.getElementById("login");
 
 //array of message objects - {author,date,content, type}
 const messages = [
+  /*
   {
     author: "test author right",
     date: "1/1/2021",
@@ -33,6 +34,7 @@ const messages = [
     date: "1/1/2021",
     type: messageTypes.LOGIN
   }
+  */
 ];
 
 //take in message object and return corresponding message HTML
@@ -48,7 +50,9 @@ const createMessageHTML = (message) => {
   }'>
   
   <div id="message-details">
-    <p class="message-author">${message.author}</p>
+    <p class="message-author">${
+      message.type === messageTypes.RIGHT ? "" : message.author
+    }</p>
     <p class="message-date">${message.date}</p>
     <p class="message-content">
     ${message.content}
@@ -101,4 +105,30 @@ loginBtn.addEventListener("click", (e) => {
 
   //display messages
   displayMessages();
+});
+
+//send btn
+sendBtn.addEventListener("click", (e) => {
+  //preventdefault of a form
+  //browser does not reload the page (default)
+  e.preventDefault();
+
+  if (!messageInput.value) {
+    return console.log("must supply a message");
+  }
+
+  //set username and create logged in message
+  const message = {
+    author: username,
+    date: new Date(),
+    content: messageInput.value,
+    type: messageTypes.RIGHT
+  };
+  messages.push(message);
+  displayMessages();
+  messageInput.value = "";
+  //console.log(message);
+
+  //SCROLL TO THE BOTTOM
+  chatWindow.scrollTop = chatWindow.scrollHeight;
 });
